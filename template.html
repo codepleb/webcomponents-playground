@@ -1,0 +1,12 @@
+<template>
+    <span>Hello World!</span>
+</template>
+
+<script>
+    //get the imported HTML document
+    var importedDoc = document.querySelector( '#myTemplate' ).import
+    //get the content of the template element
+    var content = importedDoc.querySelector( 'template' ).content
+    //add a compy to the main page
+    document.querySelector( '#container' ).appendChild( content.cloneNode( true ) ) 
+</script>

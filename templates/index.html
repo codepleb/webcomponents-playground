@@ -1,0 +1,38 @@
+<template id="dialog-template">
+    <dialog>
+      <p></p>
+      <button>⚓️ All Ashore!</button>
+    </dialog>
+  </template>
+  
+  <label>
+    Type a <abbr title="message"> 💌</abbr>
+    <input id="input"/>
+  </label>
+  
+  <button id="clone-it"><abbr title="Go!">🦑 Ahoy!</abbr></button>
+  
+  <script>
+    document.getElementById('clone-it').onclick = () => alert(input.value);
+  
+    function superAlert(message) {
+      // get a reference to the template
+      const template = document.getElementById('dialog-template');
+      // clone or "stamp" the template's contents
+      const clone = template.content.cloneNode(true);
+  
+      // Make any changes to the stamped content
+      const diag = clone.firstElementChild;
+  
+      // <dialog> element polyfill
+      dialogPolyfill.registerDialog(diag);
+  
+      diag.firstElementChild.textContent = message;
+      diag.lastElementChild.onclick = function closeModal() {
+        diag.close();
+        diag.remove();
+      }
+      document.body.appendChild(diag)
+      diag.showModal();
+    }
+  </script>
