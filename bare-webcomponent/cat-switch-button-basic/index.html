@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Lazy Images</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="https://unpkg.com/prismjs/prism.js"></script>
+    <script defer src="lazy-image.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <pre><h2>&lt;lazy-image&gt; Shadow Contents:</h2><code id="output"></code></pre> 
+    
+    <button>
+      Click to Change Image Url
+      <lazy-image alt="Picture of a cat" src="https://placekitten.com/200/100"></lazy-image>
+    </button>
+    
+    
+  </body>
+</html>

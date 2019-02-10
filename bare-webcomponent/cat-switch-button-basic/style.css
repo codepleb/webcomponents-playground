@@ -1,0 +1,50 @@
+/* CSS files add styling rules to your content */
+html {
+    --hue: .75turn;
+  }
+  
+  body {
+    font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+    margin: 2em;
+    background: hsl(var(--hue), 100%, 90%);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button {
+    display: flex;
+    flex-flow: column nowrap;
+    background: hsl(var(--hue), 30%, 20%, 1);
+    color: hsl(var(--hue), 100%, 80%);
+    border: none;
+    border-radius: 4px;
+    padding: 0.61em;
+    box-shadow: 1px 1px 1px #222;
+  }
+  
+  button:active {
+    background: #222;
+    box-shadow: none;
+    transform: translate(1px, 1px);
+  }
+  
+  dt {
+    font-family: monospace
+  }
+  
+  pre {
+    background: hsl(var(--hue), 90%, 95%);
+    padding: 1em;
+    border-radius: 0.25em;    
+    max-width: 700px;
+    white-space: pre-wrap;
+  }
+  
+  h1, h2 {
+    margin-top: 0;
+    font-style: italic;
+    color: hsl(var(--hue), 100%, 20%);
+  }
+  
